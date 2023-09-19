@@ -8,4 +8,4 @@ stages:
       - job: linter_validation
         steps:
           - script: |
-              ansible-lint ./servers.yml
+              ansible-lint $(Build.SourcesDirectory)/servers.yml

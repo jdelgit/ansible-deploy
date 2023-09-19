@@ -1,0 +1,7 @@
+- name: Deploy to On Premise VM or container
+  hosts: servers
+  roles:
+    - role: linux_defaults
+      tags: linux_defaults,      basic,         standard
+    - role: kubernetes
+      tags: k8s
