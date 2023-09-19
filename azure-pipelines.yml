@@ -2,10 +2,23 @@ trigger: none
 
 pool: Default
 
+resources:
+  repositories:
+    - repository: ansible-roles
+      type: git
+      name: ansible-roles
+      ref: feature/add-nginx
+
 stages:
   - stage: Validate
     jobs:
       - job: linter_validation
         steps:
+          - checkout: self
+            displayName: Checkout this repo
+
+          - checkout: terraform-modules
+            displayName: Checkout ansible-roles
+
           - script: |
-              ansible-lint $(Build.SourcesDirectory)/servers.yml
+              ansible-lint $(Build.SourcesDirectory)/$(Build.Repository.Name)/servers.yml
