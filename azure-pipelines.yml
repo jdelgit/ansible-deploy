@@ -1,0 +1,11 @@
+trigger: none
+
+pool: Default
+
+stages:
+  - stage: Validate
+    jobs:
+      - job: linter_validation
+        steps:
+          - script: |
+              ansible-lint ./servers.yml

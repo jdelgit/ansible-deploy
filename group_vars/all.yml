@@ -1,0 +1,7 @@
+# Variable definitions in this file overrides the variable in all environments
+# Copy and edit the variable to the desired environment inventory file to overwrite value for deployment
+################################################################
+# ------------------------ General --------------------------- #
+################################################################
+
+default_timezone: Europe/Amsterdam
