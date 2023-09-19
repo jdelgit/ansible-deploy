@@ -21,4 +21,4 @@ stages:
             displayName: Checkout ansible-roles
 
           - script: |
-              ansible-lint $(Build.SourcesDirectory)/$(Build.Repository.Name)/servers.yml
+              ansible-lint -vv $(Build.SourcesDirectory)/$(Build.Repository.Name)/servers.yml
