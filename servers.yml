@@ -3,5 +3,7 @@
   roles:
     - role: linux_defaults
       tags: linux_defaults,      basic,         standard
+    - role: nginx
+      tags: basic
     - role: kubernetes
       tags: k8s
