@@ -17,7 +17,7 @@ stages:
           - checkout: self
             displayName: Checkout this repo
 
-          - checkout: terraform-modules
+          - checkout: ansible-roles
             displayName: Checkout ansible-roles
 
           - script: |
